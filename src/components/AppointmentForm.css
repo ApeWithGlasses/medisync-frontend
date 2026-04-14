@@ -1,0 +1,87 @@
+/* AppointmentForm */
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--gray-900);
+  font-size: 0.95rem;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.form-input:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+.form-input.error {
+  border-color: var(--danger-color);
+  background-color: rgba(239, 68, 68, 0.02);
+}
+
+.form-input.error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+  font-size: 0.85rem;
+  color: var(--danger-color);
+  font-weight: 500;
+}
+
+.form-submit {
+  padding: 0.875rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.form-submit:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+  transform: translateY(-2px);
+}
+
+.form-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .appointment-form {
+    padding: 1.5rem;
+  }
+}
